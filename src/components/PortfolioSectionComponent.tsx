@@ -6,7 +6,6 @@ import { portfolioList } from "@/constants";
 import { truncateList } from "@/utils";
 import SectionLayout from "@/layouts/SectionLayout";
 import type { Portfolio } from "@/types";
-import Tilt from "react-parallax-tilt";
 
 function PortfolioSectionComponent(): React.JSX.Element {
   const truncatedPortfolioList: Portfolio[] = truncateList(portfolioList, 0, 6);
@@ -43,7 +42,6 @@ function PortfolioSectionComponent(): React.JSX.Element {
         >
           {truncatedPortfolioList.map(
             ({ title, imageThumbnail, description, livePreviewURL, repositoryURL, techStack }, index): React.ReactNode => (
-              <Tilt>
               <GridItem key={`${title} - ${index}`}>
                 <PortfolioCard
                   title={title}
@@ -54,7 +52,6 @@ function PortfolioSectionComponent(): React.JSX.Element {
                   techStack={techStack}
                 />
               </GridItem>
-              </Tilt>
             )
           )}
         </Grid>

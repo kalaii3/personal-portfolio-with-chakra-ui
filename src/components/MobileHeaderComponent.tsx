@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link } from "@chakra-ui/next-js";
 import { Show, Flex, useColorMode, Drawer, DrawerContent, DrawerCloseButton, DrawerBody, DrawerFooter, DrawerHeader } from "@chakra-ui/react";
 import { navigationLinkList } from "@/constants";
+import { ThemeToggleButton } from "@/fragments";
 
 type MobileHeaderComponentProps = {
   isOpen: boolean;
@@ -78,6 +79,13 @@ export default function MobileHeaderComponent({ isOpen, onClose, activeHref, set
               </Flex>
             </Flex>
           </DrawerBody>
+
+          <DrawerFooter justifyContent="center">
+            <ThemeToggleButton
+              colorMode={colorMode}
+              toggleColorMode={handleToggleColorModeAndCloseNavigation}
+            />
+          </DrawerFooter>
         </DrawerContent>
       </Drawer>
     </Show>

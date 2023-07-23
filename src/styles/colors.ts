@@ -1,8 +1,8 @@
 import type { Color } from "@/types";
 
 export const primaryColor: Color = {
-   _dark:"#0ea5e9",
-   default: "#38bdf8",
+   default:"#0ea5e9",
+   _dark: "#38bdf8",
 };
 
 export const secondaryColor: Color = {

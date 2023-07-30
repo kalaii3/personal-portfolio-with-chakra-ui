@@ -87,7 +87,7 @@ function HomeSectionComponent(): React.JSX.Element {
             <Text
               as={motion.p}
               variants={textVariantTransition(1.4)}
-              color="secondary"
+              color="#C5CADF"
               fontWeight="medium"
               fontSize="1rem"
               maxWidth="28.5rem"

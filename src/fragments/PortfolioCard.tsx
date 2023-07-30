@@ -90,7 +90,7 @@ export default function PortfolioCard({ title, imageThumbnail, description, live
             )}
           </Flex>
 
-          <Text noOfLines={2}>{description}</Text>
+          <Text noOfLines={2} color={"#C5CADF"} >{description}</Text>
         </CardBody>
 
         <CardFooter>
@@ -114,7 +114,7 @@ export default function PortfolioCard({ title, imageThumbnail, description, live
               _hover={{
                 borderColor: "text",
                 backgroundColor: "text",
-                color: colorMode === "dark" ? "primary" : "white",
+                color: "primary",
               }}
               rightIcon={<BsFillEyeFill />}
             >

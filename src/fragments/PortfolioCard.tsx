@@ -56,7 +56,7 @@ export default function PortfolioCard({ title, imageThumbnail, description, live
             fontSize="1.5rem"
             transition="all 300ms"
             cursor="pointer"
-            color= "#ffffff"
+            color= "#FFFFFFEB"
             _hover={{
               color: "primary",
             }}

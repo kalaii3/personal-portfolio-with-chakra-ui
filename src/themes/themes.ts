@@ -12,7 +12,13 @@ export const colors: ThemeColor = {
 
 export const chakraThemes = extendTheme({
   fonts,
-  styles,
+  styles:{
+    global: {
+      // Modify the default text color here"
+      body: {
+        color: '#ffffff',
+      },
+  },
   semanticTokens: {
     colors,
   },

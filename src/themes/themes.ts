@@ -18,6 +18,7 @@ export const chakraThemes = extendTheme({
       body: {
         color: '#ffffff',
       },
+    },
   },
   semanticTokens: {
     colors,

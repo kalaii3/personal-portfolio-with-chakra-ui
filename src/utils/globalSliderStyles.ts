@@ -13,11 +13,11 @@ export const globalSliderStyles = (colorMode: ColorMode): string => {
         bottom: 0;
         width: initial;
         height: initial;
-        background-color: ${colorMode === "light" ? "#ffffff" : "#132347"};
-        border: 2px solid ${colorMode === "light" ? "#0ea5e9" : "#38bdf8"};
+        background-color: ${colorMode === "dark" ? "#ffffff" : "#132347"};
+        border: 2px solid ${colorMode === "dark" ? "#0ea5e9" : "#38bdf8"};
         padding: 0.5rem;
         border-radius: 0.5rem;
-        color: ${colorMode === "light" ? "#0ea5e9" : "#38bdf8"};
+        color: ${colorMode === "dark" ? "#0ea5e9" : "#38bdf8"};
       }
       
       .swiper-button-next {

@@ -1,154 +1,171 @@
 import * as React from "react";
-import { Link } from "@chakra-ui/next-js";
-import { Box, Container, Flex, Hide, Show, useColorMode, useDisclosure } from "@chakra-ui/react";
-import { HiMenu } from "react-icons/hi";
-import { IoClose } from "react-icons/io5";
-import { navigationLinkList, profileData } from "@/constants";
-import { ThemeToggleButton } from "@/fragments";
-import { staggeredContainer, fadeInTransition } from "@/utils";
+import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
-import MobileHeaderComponent from "./MobileHeaderComponent";
+import { Box, Button, Container, Flex, Grid, GridItem, Show, Text, useColorMode } from "@chakra-ui/react";
+import { BsArrowDown } from "react-icons/bs";
+import { FaDownload } from "react-icons/fa";
+import { profileData } from "@/constants";
+import { HomeImageBlob, PrimaryButton } from "@/fragments";
+import { colors } from "@/themes";
+import Image from "next/image";
+import { bouncingAnimation, slideInTransition, staggeredContainer, textVariantTransition, zoomInTransition } from "@/utils";
+import SectionLayout from "@/layouts/SectionLayout";
+import { BsFillChatFill } from "react-icons/bs";
+import Tilt from "react-parallax-tilt";
 
-export default function HeaderComponent(): React.JSX.Element {
-  const [isScrolled, setIsScrolled] = React.useState<boolean>(false);
-  const [activeNavigationLink, setActiveNavigationLink] = React.useState<string>("home");
-  const { colorMode, toggleColorMode } = useColorMode();
-  const { isOpen, onClose, onOpen, onToggle } = useDisclosure();
+function HomeSectionComponent(): React.JSX.Element {
+  const { colorMode } = useColorMode();
 
-  const { name } = profileData;
-
-  const onClickHandleActiveNavigation = (link: string): void => {
-    setActiveNavigationLink(link);
-  };
-
-  React.useEffect((): void => {
-    window.addEventListener("scroll", (): void => {
-      window.scrollY > 50 ? setIsScrolled(true) : setIsScrolled(false);
-    });
-  }, []);
+  const { name, divisions, descriptions, pictures } = profileData;
 
   return (
-    <React.Fragment>
-      <Box
-        as={motion.header}
+    <Box
+      as="section"
+      id="home"
+      width="100vw"
+      height={{ base: "100%", xl: "100vh" }}
+      paddingTop="7.5rem"
+      paddingBottom="1rem"
+    >
+      {/* Home Section Container */}
+      <Container
+        as={motion.div}
         variants={staggeredContainer(0.1, 0.1)}
+        viewport={{ once: true, amount: 0.25 }}
         whileInView="show"
         initial="hidden"
-        width="100vw"
-        shadow={isScrolled ? "lg" : "none"}
-        top={0}
-        left={0}
-        right={0}
-        zIndex={100}
-        position="fixed"
-        backdropFilter={{ base: "none", lg: isScrolled ? "blur(1.25rem)" : "none" }}
-        backgroundColor={{ base: isScrolled ? "background" : "transparent", lg: isScrolled ? "rgba(255, 255, 255, 0.1)" : "transparent" }}
-        transition="all 300ms"
+        maxWidth={{ base: "container.lg", xl: "75rem" }}
+        paddingX={{ base: "4", xl: 0 }}
+        paddingTop="4rem"
       >
-        {/* Header Container */}
-        <Container
-          as={motion.div}
-          variants={fadeInTransition("down", "tween", 0.1, 0.5)}
-          width="100%"
-          paddingX="1rem"
-          maxWidth={{ sm: "40rem", md: "48rem", lg: "75rem", xl: "82rem", "2xl": "98rem" }}
-          height={{ base: isScrolled ? "calc(3rem + 1rem)" : "calc(4rem + 1rem)", md: isScrolled ? "calc(4rem + 1rem)" : "calc(5rem + 1rem)" }}
-          transition="all 300ms"
-        >
-          <Flex
-            as="nav"
-            width="100%"
-            height="100%"
-            alignItems="center"
-            justifyContent="space-between"
+        <Grid templateColumns={{ base: "1fr", lg: "repeat(2, 1fr)" }}>
+          {/* Home Section Text Info Content */}
+          <Box
+            as={motion.div}
+            variants={slideInTransition("left", "tween", 0.1, 1)}
+            display="flex"
+            flexDirection="column"
+            paddingY="4rem"
+            alignItems={{ base: "center", lg: "start" }}
+            textAlign={{ base: "center", lg: "start" }}
           >
-            {/* Header Logo */}
-            <Link
-              href="/"
+            <Text
+              as={motion.span}
+              variants={textVariantTransition(1.1)}
+              color="secondary"
+              fontWeight="semibold"
+              fontSize="1rem"
+            >
+              Hello I&apos;am
+            </Text>
+
+            <Text
+              as={motion.h1}
+              variants={textVariantTransition(1.2)}
               color="primary"
               fontWeight="semibold"
-              fontSize={{ base: "lg", lg: "1.5rem" }}
-              _hover={{
-                textDecoration: "none",
-              }}
+              lineHeight="120%"
+              fontSize={{ base: "2.75rem", md: "3rem", lg: "4rem" }}
+              marginTop="1"
+              marginBottom="4"
+              maxWidth="85%"
             >
               {name}
-            </Link>
+            </Text>
 
-            {/* Header Navigation Link List (Laptop Devices Only) */}
-            <Show above="xl">
-              <Flex
-                alignItems="center"
-                columnGap="12"
-                className="navigation-list"
-              >
-                {navigationLinkList.map(
-                  ({ title, href }, index): React.ReactNode => (
-                    <Link
-                      key={`#${title} - ${index}`}
-                      href={`/#${href}`}
-                      color={activeNavigationLink === href ? "primary" : "text"}
-                      fontWeight="medium"
-                      fontSize="1rem"
-                      borderBottom="2px"
-                      borderBottomColor={activeNavigationLink === href ? "primary" : "transparent"}
-                      scroll={false}
-                      _hover={{
-                        color: "primary",
-                        textDecoration: "none",
-                      }}
-                      onClick={() => onClickHandleActiveNavigation(href)}
-                    >
-                      {title}
-                    </Link>
-                  )
-                )}
-              </Flex>
-            </Show>
+            <Text
+              as={motion.h2}
+              variants={textVariantTransition(1.3)}
+              color="text"
+              fontWeight="semibold"
+              fontSize="1.5rem"
+              marginBottom="6"
+            >
+              <Typewriter options={{ strings: divisions, autoStart: true, loop: true }} />
+            </Text>
 
-            {/* Theme Toggle Button */}
-            <Show above="xl">
-              <Flex
-                justifyContent="center"
-                alignItems="center"
-              >
-                <ThemeToggleButton
-                  colorMode={colorMode}
-                  toggleColorMode={toggleColorMode}
-                />
-              </Flex>
-            </Show>
+            <Text
+              as={motion.p}
+              variants={textVariantTransition(1.4)}
+              color="secondary"
+              fontWeight="medium"
+              fontSize="1rem"
+              maxWidth="28.5rem"
+              marginBottom="8"
+            >
+              {descriptions[0]}
+            </Text>
 
-            {/* Header Sidebar Links Open / Close Button */}
-            <Hide above="xl">
-              <Box
-                as="button"
-                aria-label="Mobile Navigation Bar Toggle Button"
-                color="white"
-                padding="4"
-                borderRadius="md"
-                backgroundColor="primary"
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-                transition="all 300ms"
-                onClick={onToggle}
+            <Box
+              as={motion.div}
+              variants={zoomInTransition(1.5, 0.75)}
+            >
+              <PrimaryButton
+                href={"/#contact"}
+                // target="_blank"
+                variant="solid"
+                size="xl"
+                borderRadius="0.5rem"
+                paddingY="4"
+                paddingX={{ base: "8", lg: "12" }}
+                columnGap={2}
+                rightIcon={<BsFillChatFill className="text-[20px]" />}
               >
-                {isOpen ? <IoClose /> : <HiMenu />}
-              </Box>
-            </Hide>
+                Lets Talk
+              </PrimaryButton>
+            </Box>
+          </Box>
+
+          {/* Home Section Profile Image */}
+          <Box
+            as={motion.div}
+            variants={slideInTransition("right", "tween", 0.1, 1)}
+            display="flex"
+            flex="1"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Tilt>
+            <Image
+            src={pictures[0]}
+            width={300}
+            height={400}
+            alt="Profile Image On About Section"
+            />
+            </Tilt>
+          </Box>
+        </Grid>
+
+        <Show above="lg">
+          <Flex
+            as={motion.div}
+            variants={slideInTransition("up", "tween", 0.2, 1.1)}
+            viewport={{ once: true }}
+            whileInView="show"
+            initial="hidden"
+            justifyContent="center"
+            alignItems="center"
+            marginTop={{ lg: "10", xl: "16" }}
+            animation={`${bouncingAnimation} 1s ease-in-out infinite`}
+          >
+            <Button
+              as="a"
+              href="/#about"
+              variant="link"
+              color="text"
+              rightIcon={<BsArrowDown fontSize="1.25rem" />}
+              _hover={{
+                color: "primary",
+              }}
+            >
+              Scroll Down For More
+            </Button>
           </Flex>
-        </Container>
-      </Box>
-
-      {/* Mobile Header Navigation (Tablet & Phone Only) */}
-      <MobileHeaderComponent
-        isOpen={isOpen}
-        onOpen={onOpen}
-        onClose={onClose}
-        activeHref={activeNavigationLink}
-        setActiveHref={setActiveNavigationLink}
-      />
-    </React.Fragment>
+        </Show>
+      </Container>
+    </Box>
   );
 }
+
+export default SectionLayout(HomeSectionComponent, "home");
+

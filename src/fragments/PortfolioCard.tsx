@@ -74,6 +74,7 @@ export default function PortfolioCard({ title, imageThumbnail, description, live
                 <Badge
                   key={`${tech} - ${index}`}
                   display="flex"
+                  color="#E2E8F029"
                   alignItems="center"
                   columnGap={2}
                   paddingY={1}
@@ -85,7 +86,7 @@ export default function PortfolioCard({ title, imageThumbnail, description, live
                     width={4}
                   />
 
-                  <Text>{tech}</Text>
+                  <Text color="E2E8F0" >{tech}</Text>
                 </Badge>
               )
             )}

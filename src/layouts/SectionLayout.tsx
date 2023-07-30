@@ -48,7 +48,7 @@ export default function SectionLayout(MainSection: React.FunctionComponent, acti
                       width={2}
                       height={2}
                       borderRadius="full"
-                      backgroundColor={activeSectionIndicator === href ? "primary" : "secondary"}
+                      backgroundColor={activeSectionIndicator === href ? "secondary" : "primary"}
                       transition="all 300ms"
                     />
                   </Link>

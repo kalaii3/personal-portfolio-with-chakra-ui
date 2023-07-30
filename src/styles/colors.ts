@@ -6,7 +6,7 @@ export const primaryColor: Color = {
 };
 
 export const secondaryColor: Color = {
-  default: "#ffffff",
+  default: "#9d9d9d",
   _dark: "#c5cadf",
 };
 

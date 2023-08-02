@@ -19,7 +19,7 @@
                     <use xlink:href="#path-1"></use>
                 </mask>
                 <use id="Circle-Background" fill="#9d9d9d" xlink:href="#path-1"></use>
-                <g id="🖍-Circle-Color" mask="url(#mask-2)" fill="#0ea5e9">
+                <g id="🖍-Circle-Color" mask="url(#mask-2)" fill="#c026d3">
                     <rect id="🖍Color" x="0" y="0" width="216.445361" height="216"></rect>
                 </g>
             </g>

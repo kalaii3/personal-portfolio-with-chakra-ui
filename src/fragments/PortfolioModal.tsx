@@ -72,6 +72,7 @@ export default function PortfolioModal({ title, imageThumbnail, description, rep
                 <Badge
                   key={`${tech} - ${index}`}
                   display="flex"
+                  colorScheme="blue"
                   alignItems="center"
                   columnGap={2}
                   paddingY={1}

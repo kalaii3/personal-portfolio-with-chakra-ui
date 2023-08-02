@@ -1,26 +1,27 @@
 import type { Color } from "@/types";
 
 export const primaryColor: Color = {
-  default: "#38bdf8",
-  _dark: "#0ea5e9",
+  default: "#c026d3",
+  _dark: "#c026d3",
 };
 
 export const secondaryColor: Color = {
   default: "#c5cadf",
-  _dark: "#9d9d9d",
+  _dark: "",
 };
 
 export const backgroundColor: Color = {
-  default: "#0e1b31",
-  _dark: "#fefefe",
+  default: "#000000",
+  _dark: "#000000",
 };
 
 export const textColor: Color = {
   default: "#ffffff",
-  _dark: "#000000",
+  _dark: "#ffffff",
 };
 
 export const cardBackgroundColor: Color = {
-  default: "#132347",
-  _dark: "#ffffff",
+  default: "#0f172a",
+  _dark: "#0f172a",
 };
+

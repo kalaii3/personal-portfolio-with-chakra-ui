@@ -56,7 +56,7 @@ export const portfolioList: Portfolio[] = [
     title: "Arti Discord Bot ",
     imageThumbnail: "/assets/images/Arti.webp",
     description:
-      "Crappo is a website that I created using React JS and Tailwind CSS technologies. This website is about cryptocurrency investment. This website allows users to view, buy, and sell various cryptocurrencies such as Bitcoin, Ethereum, and Dogecoin. This website also has features such as charts, news, and alerts. This website aims to provide users with a convenient and secure platform to invest in the growing and volatile cryptocurrency market.",
+      "Arti is a Discord bot that I created using Discord JS, Node JS and MongoDB. This bot can do many things, such as playing music, displaying information about the server, displaying information about the user, and many more.",
     livePreviewURL: "https://discord.com/channels/@me/1017603739462402170/",
     repositoryURL: "https://github.com/Kalai2773/Discord-bot-template",
     techStack: [

@@ -16,7 +16,7 @@ export const chakraThemes = extendTheme({
     global: {
       // Modify the default text color here"
       body: {
-        color: '#ffffff',
+        color: '#e2e8f0',
       },
     },
   },

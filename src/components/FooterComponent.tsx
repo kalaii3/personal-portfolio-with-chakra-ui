@@ -1,6 +1,7 @@
 import { Box, Flex, Icon, Link, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useContext } from "react";
+import { chakra } from '@chakra-ui/react';
 import { HiMail } from "react-icons/hi";
 import { staggeredContainer } from "@/utils";
 import { FaGithub, FaInstagram, FaLinkedin, FaInstagramSquare } from "react-icons/fa";

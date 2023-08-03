@@ -6,6 +6,8 @@ import { staggeredContainer } from "@/utils";
 import { FaGithub, FaInstagram, FaLinkedin, FaInstagramSquare } from "react-icons/fa";
 import NowPlaying from "../pages/api/NowPlaying";
 
+const HoverLink = chakra.a;
+
 export default function FooterComponent(): React.JSX.Element {
 return (
   <section id="contact">
@@ -21,15 +23,21 @@ return (
         </Text>
         <Text>So that we can talk more about...</Text>
         <Flex justify="center" align="center" gap={4} my={4}>
-          <Link
-            aria-label="Email"
-            className="contact-icon transition duration-300 hover:scale-125"
-            target="_blank"
-            rel="noreferrer"
-            href="mailto:iamkalai33@gmail.com"
-          >
+          <HoverLink
+      aria-label="Email"
+      display="inline-block"
+      borderRadius="full"
+      p="2"
+      transition="transform 0.3s"
+      _hover={{
+        transform: 'scale(1.25)',
+      }}
+      href="mailto:iamkalai33@gmail.com"
+      target="_blank"
+      rel="noreferrer"
+    >
             <HiMail style={{ cursor: "pointer" }} fontSize="38px" />
-          </Link>
+          </HoverLink>
           <Link
             aria-label="Github"
             className="contact-icon transition duration-300 hover:scale-125"

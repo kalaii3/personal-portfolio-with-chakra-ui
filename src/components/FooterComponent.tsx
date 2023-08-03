@@ -27,7 +27,7 @@ return (
            aria-label="Email"
            display="inline-block"
            borderRadius="full"
-           p="2"
+          // p="2"
            transition="transform 0.3s"
            _hover={{
            transform: 'scale(1.25)',
@@ -42,7 +42,7 @@ return (
             aria-label="Github"
             display="inline-block"
             borderRadius="full"
-            p="2"
+            //p="2"
             transition="transform 0.3s"
             _hover={{
             transform: 'scale(1.25)',
@@ -57,7 +57,7 @@ return (
             aria-label="Linkedin"
             display="inline-block"
             borderRadius="full"
-            p="2"
+            //p="2"
             transition="transform 0.3s"
             _hover={{
             transform: 'scale(1.25)',
@@ -72,7 +72,7 @@ return (
             aria-label="Instagram"
             display="inline-block"
             borderRadius="full"
-            p="2"
+            //p="2"
             transition="transform 0.3s"
             _hover={{
             transform: 'scale(1.25)',

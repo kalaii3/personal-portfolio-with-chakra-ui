@@ -21,7 +21,6 @@ export default function MainPage(): React.JSX.Element {
       <AboutSectionComponent />
       <SkillsSectionComponent />
       <PortfolioSectionComponent />
-      <BlogSectionComponent />
       <FooterComponent />
     </Box>
   );

@@ -17,7 +17,13 @@ return (
         width="100vw"
         paddingBottom="1rem"
     >
-        <Box as="div" textAlign="center">
+        <Box as="div" py="10"
+      h="50vh"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      flexDirection="column"
+          >
         <Text as="h1" fontSize="5xl">
           Get in Touch
         </Text>

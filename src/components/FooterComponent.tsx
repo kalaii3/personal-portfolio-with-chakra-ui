@@ -85,7 +85,7 @@ return (
             }}
             target="_blank"
             rel="noreferrer"
-            href="https://www.instagram.com/kxlai_3/"
+            href="https://www.instagram.com/kalaii.3/"
           >
             <FaInstagramSquare style={{ cursor: "pointer" }} fontSize="32px" />
           </HoverLink>

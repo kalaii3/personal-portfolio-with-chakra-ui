@@ -70,7 +70,7 @@ return (
             }}
             target="_blank"
             rel="noreferrer"
-            href="https://www.linkedin.com/m/in/kalaiyarasan-v-2613a0255/"
+            href="https://www.linkedin.com/m/in/kalaiyarasan-v/"
           >
             <FaLinkedin style={{ cursor: "pointer" }} fontSize="32px" />
           </HoverLink>

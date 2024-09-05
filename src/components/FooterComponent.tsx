@@ -55,7 +55,7 @@ return (
             }}
             target="_blank"
             rel="noreferrer"
-            href="https://github.com/Kalai2773/"
+            href="https://github.com/kalaii3/"
           >
             <FaGithub style={{ cursor: "pointer" }} fontSize="32px" />
           </HoverLink>
@@ -93,7 +93,7 @@ return (
         <Box as="div" textAlign="center">
           <NowPlaying />
         </Box>
-        <Text>Copyright © 2023</Text>
+        <Text>Copyright © 2024</Text>
         <Link aria-label="OldSite" color="gray.400" fontSize="sm" target="_blank" rel="noreferrer" href="https://portfolio-kalai2773.vercel.app/">
           View Old Site
         </Link>

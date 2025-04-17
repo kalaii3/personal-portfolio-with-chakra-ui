@@ -1,0 +1,26 @@
+{
+  "index.tsx -> @/components/AboutSectionComponent": {
+    "id": "index.tsx -> @/components/AboutSectionComponent",
+    "files": []
+  },
+  "index.tsx -> @/components/BlogSectionComponent": {
+    "id": "index.tsx -> @/components/BlogSectionComponent",
+    "files": []
+  },
+  "index.tsx -> @/components/FooterComponent": {
+    "id": "index.tsx -> @/components/FooterComponent",
+    "files": []
+  },
+  "index.tsx -> @/components/HomeSectionComponent": {
+    "id": "index.tsx -> @/components/HomeSectionComponent",
+    "files": []
+  },
+  "index.tsx -> @/components/PortfolioSectionComponent": {
+    "id": "index.tsx -> @/components/PortfolioSectionComponent",
+    "files": []
+  },
+  "index.tsx -> @/components/SkillsSectionComponent": {
+    "id": "index.tsx -> @/components/SkillsSectionComponent",
+    "files": []
+  }
+}

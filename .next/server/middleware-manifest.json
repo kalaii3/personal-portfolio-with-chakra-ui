@@ -1,0 +1,23 @@
+{
+  "sortedMiddleware": [],
+  "middleware": {},
+  "functions": {
+    "/api/now-playing": {
+      "files": [
+        "server/edge-runtime-webpack.js",
+        "server/pages/api/now-playing.js"
+      ],
+      "name": "pages/api/now-playing",
+      "page": "/api/now-playing",
+      "matchers": [
+        {
+          "regexp": "^/api/now\\-playing$",
+          "originalSource": "/api/now-playing"
+        }
+      ],
+      "wasm": [],
+      "assets": []
+    }
+  },
+  "version": 2
+}

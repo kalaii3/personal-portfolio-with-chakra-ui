@@ -1,7 +1,6 @@
 
 
-import { chakra, Box, Icon, Link as ChakraLink } from "@chakra-ui/react";
-import { FiMusic } from "react-icons/fi";
+import { chakra, Box, Link as ChakraLink } from "@chakra-ui/react";
 import useSWR from 'swr';
 import {animate} from "motion";
 import fetcher from './fetcher';
